@@ -123,9 +123,9 @@
 			
 			for (var i = 0; i < list.length; i++) {
 			    // we create the element
-               	var EntryElm = $(document.createElement('li')).data("node-id", list[i].id).data("node-type", list[i].type).data("node-data", list[i]).attr('title', list[i].label);
+               	var EntryElm = $(document.createElement('li')).data("node-id", list[i].id).data("node-type", list[i].type).data("node-data", list[i]).attr('title', list[i].label).attr('id', list[i].id);
                 var EntryIconElm = $(document.createElement('i')).addClass( self.settings.indicators[list[i].type] );
-                
+
                 // we build the node entry
 				EntryElm[0].appendChild( document.createTextNode(list[i].label) );
 				EntryElm[0].appendChild( EntryIconElm[0] );
